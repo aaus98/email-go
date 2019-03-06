@@ -1,14 +1,49 @@
 package main
 
 import (
-	"fmt"
+	"encoding/csv"
+	"io"
+	"os"
 	"send_email_go/mailers"
 )
 
+//User is for save information from csv
+type User struct {
+	Name  string
+	Email string
+}
+
 func main() {
-	fmt.Println("asdasdas")
-	subject := "Get latest Tech News directly to your inbox"
-	receiver := []string{"adri_ubi_9@hotmail.com", "luis.pch01@gmail.com", "paulov01324@gmail.com"}
-	r := mailers.NewRequest(receiver, subject)
-	r.Send("templates/template.html", map[string]string{"username": "Paulo"})
+	users, _ := parseLocation("./user.csv")
+	for _, user := range users {
+		subject := "Get latest Tech News directly to your inbox"
+		receiver := []string{user.Email}
+		r := mailers.NewRequest(receiver, subject)
+		r.Send("templates/template.html", map[string]string{"username": user.Name})
+	}
+}
+
+func parseLocation(file string) (map[string]*User, error) {
+	f, err := os.Open(file)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	csvr := csv.NewReader(f)
+
+	locations := map[string]*User{}
+	for {
+		row, err := csvr.Read()
+		if err != nil {
+			if err == io.EOF {
+				err = nil
+			}
+			return locations, err
+		}
+		p := &User{}
+		p.Name = row[0]
+		p.Email = row[1]
+		locations[row[0]] = p
+	}
 }
