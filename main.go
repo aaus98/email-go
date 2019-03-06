@@ -14,7 +14,7 @@ type User struct {
 }
 
 func main() {
-	users, _ := parseLocation("./user.csv")
+	users, _ := parseUser("./user.csv")
 	for _, user := range users {
 		subject := "Get latest Tech News directly to your inbox"
 		receiver := []string{user.Email}
@@ -23,7 +23,7 @@ func main() {
 	}
 }
 
-func parseLocation(file string) (map[string]*User, error) {
+func parseUser(file string) (map[string]*User, error) {
 	f, err := os.Open(file)
 	if err != nil {
 		return nil, err
