@@ -16,7 +16,7 @@ type User struct {
 func main() {
 	users, _ := parseUser("./user.csv")
 	for _, user := range users {
-		subject := "Get latest Tech News directly to your inbox"
+		subject := "Prueba Sunapp es gratis"
 		receiver := []string{user.Email}
 		r := mailers.NewRequest(receiver, subject)
 		r.Send("templates/template.html", map[string]string{"username": user.Name})

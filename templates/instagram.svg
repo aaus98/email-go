@@ -1,0 +1,10 @@
+<svg id="Grupo_1954" data-name="Grupo 1954" xmlns="http://www.w3.org/2000/svg" width="22.535" height="22.535" viewBox="0 0 22.535 22.535">
+  <ellipse id="Elipse_411" data-name="Elipse 411" cx="11.268" cy="11.267" rx="11.268" ry="11.267" fill="#707070"/>
+  <g id="Grupo_1951" data-name="Grupo 1951" transform="translate(3.821 3.793)">
+    <ellipse id="Elipse_412" data-name="Elipse 412" cx="0.871" cy="0.871" rx="0.871" ry="0.871" transform="translate(10.565 2.697)" fill="#fff"/>
+    <path id="Trazado_1128" data-name="Trazado 1128" d="M284.781,127.5a3.681,3.681,0,1,0,3.681,3.681A3.694,3.694,0,0,0,284.781,127.5Zm0,6.041a2.36,2.36,0,1,1,2.36-2.36A2.339,2.339,0,0,1,284.781,133.541Z" transform="translate(-277.25 -123.707)" fill="#fff"/>
+    <g id="Grupo_1950" data-name="Grupo 1950" transform="translate(0)">
+      <path id="Trazado_1129" data-name="Trazado 1129" d="M277.853,128.948H271.9a4.509,4.509,0,0,1-4.5-4.5V118.5a4.509,4.509,0,0,1,4.5-4.5h5.957a4.509,4.509,0,0,1,4.5,4.5v5.957A4.509,4.509,0,0,1,277.853,128.948ZM271.9,115.433a3.1,3.1,0,0,0-3.091,3.091v5.957a3.1,3.1,0,0,0,3.091,3.091h5.957a3.1,3.1,0,0,0,3.091-3.091V118.5a3.1,3.1,0,0,0-3.091-3.091H271.9Z" transform="translate(-267.4 -114)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
